@@ -1,0 +1,28 @@
+Trend = int (input ("Market is in Uptrend or Downtrend. Enter 1 for Uptrend, 2 for Downtrend"))
+
+UL = int (input ("Enter Upper Swing level "))
+LL = int (input ("Enter Lower Swing level "))
+
+Diff = int (UL-LL)
+
+if Trend == 1:
+   
+    S1 = int ( UL - (Diff * 0.236))
+    S2 = int ( UL - (Diff * 0.382))
+    S3 = int ( UL - (Diff * 0.5))
+    S4 = int ( UL - (Diff * 0.618))
+    S5 = int ( UL - (Diff * 0.71))
+    
+    print (" \n Support 1 (23.6%) = {}, \n Support 2(38.2%) = {}, \n Support 3(50%) = {}, \n Support 4(61.8%) = {}, \n Support 5(71%) = {}".format(S1,S2,S3,S4,S5))
+    
+elif Trend == 2:
+    
+    R1 = int ( LL + (Diff * 0.236))
+    R2 = int ( LL + (Diff * 0.382))
+    R3 = int ( LL + (Diff * 0.5))
+    R4 = int ( LL + (Diff * 0.618))
+    R5 = int ( LL + (Diff * 0.71))
+    
+    print ("\n Resistance 1 (23.6%) = {} , \n Resistance 2(38.2%) = {}, \n Resistance 3(50%) = {}, \n Resistance 4(61.8%) = {}, \n Resistance 5(71%) = {}".format(R1,R2,R3,R4,R5))
+    
+else: print ("Enter only 1 or 2")
